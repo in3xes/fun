@@ -17,5 +17,7 @@ urlpatterns = patterns('',
     (r'^images/(?P<path>.*)$', 'django.views.static.serve',
      {'document_root': '/home/gen/users/pradeep/fun/images/'}),
     (r'^rate/$', 'rate.views.index'),
+    (r'^rate/(?P<institute>[a-z]{4})/$', 'rate.views.institute'),
+    (r'^rate/(?P<institute>[a-z]{4})/(?P<department>[a-z]{3})/$$', 'rate.views.inst_dept')
+                       
 )
-
