@@ -1,0 +1,14 @@
+{% if list_of_profs %}
+<table>
+  {% for val in list_of_profs %}
+  <tr>
+    <td>{{ val.name }}</td>
+    <td>{{ val.department }} </td>
+    <td>{{ val.institute }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% else %}
+<p>No rows present in db</p>
+{% endif %}
+

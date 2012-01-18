@@ -14,5 +14,8 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
+    (r'^images/(?P<path>.*)$', 'django.views.static.serve',
+     {'document_root': '/home/gen/users/pradeep/fun/images/'}),
+    (r'^rate/$', 'rate.views.index'),
 )
 
