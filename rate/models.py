@@ -33,9 +33,9 @@ class prof(models.Model):
     website = models.CharField(max_length=200)
     email = models.EmailField(max_length=20)
     photo = models.ImageField(upload_to='images')
-    coolness = models.IntegerField()
-    knowledge = models.IntegerField()
-    looks = models.IntegerField()
+    coolness = models.IntegerField(null=True, blank=True)
+    knowledge = models.IntegerField(null=True, blank=True)
+    looks = models.IntegerField(null=True, blank=True)
 
     def __unicode__(self):
         return self.name

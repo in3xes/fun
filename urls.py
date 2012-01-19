@@ -18,6 +18,8 @@ urlpatterns = patterns('',
      {'document_root': '/home/gen/users/pradeep/fun/images/'}),
     (r'^rate/$', 'rate.views.index'),
     (r'^rate/(?P<institute>[a-z]{4})/$', 'rate.views.institute'),
-    (r'^rate/(?P<institute>[a-z]{4})/(?P<department>[a-z]{3})/$$', 'rate.views.inst_dept')
-                       
+    (r'^rate/(?P<institute>[a-z]{4})/(?P<department>[a-z]{3})/$', 'rate.views.inst_dept'),
+    (r'^rate/(?P<department>[a-z]{3})/$', 'rate.views.department'),
+    (r'^rate/(?P<id>\d+)/$', 'rate.views.prof_id'),
+    (r'^rate/submit/(?P<id>\d+)/$', 'rate.views.prof_id'),
 )

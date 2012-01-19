@@ -1,0 +1,27 @@
+<html>
+<title>
+Ratings
+</title>
+<body>
+{% if prof %}
+<h2>Name: {{prof.name}}</h2>
+<form action="/rate/submit/{{ prof.id }}/" method="get">
+  {{ form.as_p }}
+  <input type="submit" value="Submit" />
+</form>
+{% else %}
+<table>
+  <tr>
+    <td>{{ val.name }}</td>
+    <td>{{ val.department }} </td>
+    <td>{{ val.institute }}</td>
+    <td>{{ val.website }}</td>
+    <td>{{ val.email }}</td>
+    <td>{{ val.coolness }}</td>
+    <td>{{ val.knowledge }}</td>
+    <td>{{ val.looks }}</td>
+  </tr>
+{% endif %}
+</form>
+</body>
+</html>
