@@ -1,0 +1,20 @@
+<html>
+  <title>
+    Ratings
+  </title>
+  <body>
+    <h2>Name: {{prof.name}}</h2><br/>
+    <table>
+      <tr>
+	<td>{{ prof.department }} </td>
+	<td>{{ prof.institute }}</td>
+	<td>{{ prof.website }}</td>
+	<td>{{ prof.email }}</td>
+      </tr>
+    </table>
+    <form action="/rate/submit/{{ prof.id }}/" method="get">
+      {{ form.as_p }}
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
